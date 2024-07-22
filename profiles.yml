@@ -1,0 +1,8 @@
+Data_warehouse_assignment_4:
+
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: 'data_warehouse.duckdb'
+      threads: 1

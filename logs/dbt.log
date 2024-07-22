@@ -1,0 +1,742 @@
+[0m20:40:51.157622 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026DFEE3B160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026D81870CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026D81870910>]}
+
+
+============================== 20:40:51.162905 | 15f290a7-0b3d-4424-9df5-a38f4f7f7a9c ==============================
+[0m20:40:51.162905 [info ] [MainThread]: Running with dbt=1.7.9
+[0m20:40:51.164141 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\asti\\Documents\\GitHub\\Data_warehouse_assignment_4', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m20:40:51.177229 [info ] [MainThread]: dbt version: 1.7.9
+[0m20:40:51.177229 [info ] [MainThread]: python version: 3.9.6
+[0m20:40:51.179731 [info ] [MainThread]: python path: C:\Users\asti\AppData\Local\Programs\Python\Python39\python.exe
+[0m20:40:51.180750 [info ] [MainThread]: os info: Windows-10-10.0.22631-SP0
+[0m20:40:51.355127 [info ] [MainThread]: Using profiles dir at C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4
+[0m20:40:51.356159 [info ] [MainThread]: Using profiles.yml file at C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4\profiles.yml
+[0m20:40:51.356159 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4\dbt_project.yml
+[0m20:40:51.357192 [info ] [MainThread]: adapter type: duckdb
+[0m20:40:51.358277 [info ] [MainThread]: adapter version: 1.7.3
+[0m20:40:51.358277 [info ] [MainThread]: Configuration:
+[0m20:40:51.359409 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:40:51.370068 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m20:40:51.370068 [info ] [MainThread]: Required dependencies:
+[0m20:40:51.371093 [debug] [MainThread]: Executing "git --help"
+[0m20:40:51.431189 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:40:51.432210 [debug] [MainThread]: STDERR: "b''"
+[0m20:40:51.433249 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:40:51.434345 [info ] [MainThread]: Connection:
+[0m20:40:51.435347 [info ] [MainThread]:   database: data_warehouse
+[0m20:40:51.435347 [info ] [MainThread]:   schema: main
+[0m20:40:51.436392 [info ] [MainThread]:   path: data_warehouse.duckdb
+[0m20:40:51.436392 [info ] [MainThread]:   config_options: None
+[0m20:40:51.437447 [info ] [MainThread]:   extensions: None
+[0m20:40:51.437447 [info ] [MainThread]:   settings: None
+[0m20:40:51.439747 [info ] [MainThread]:   external_root: .
+[0m20:40:51.439747 [info ] [MainThread]:   use_credential_provider: None
+[0m20:40:51.441123 [info ] [MainThread]:   attach: None
+[0m20:40:51.441889 [info ] [MainThread]:   filesystems: None
+[0m20:40:51.442894 [info ] [MainThread]:   remote: None
+[0m20:40:51.443355 [info ] [MainThread]:   plugins: None
+[0m20:40:51.444075 [info ] [MainThread]:   disable_transactions: False
+[0m20:40:51.445079 [info ] [MainThread]: Registered adapter: duckdb=1.7.3
+[0m20:40:51.452921 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m20:40:51.453974 [debug] [MainThread]: Using duckdb connection "debug"
+[0m20:40:51.453974 [debug] [MainThread]: On debug: select 1 as id
+[0m20:40:51.453974 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:40:51.467970 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m20:40:51.470168 [debug] [MainThread]: On debug: Close
+[0m20:40:51.472241 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:40:51.473361 [info ] [MainThread]: [31m1 check failed:[0m
+[0m20:40:51.474439 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4\dbt_project.yml> not found
+
+[0m20:40:51.475537 [debug] [MainThread]: Command `dbt debug` failed at 20:40:51.475537 after 0.42 seconds
+[0m20:40:51.475537 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:40:51.476569 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026DFEE3B160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026D818C9100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026D819C8820>]}
+[0m20:40:51.476569 [debug] [MainThread]: Flushing usage events
+[0m20:50:32.441958 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E24E3DBAF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E24DBB4250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E24DBB4130>]}
+
+
+============================== 20:50:32.445496 | 43fb5c6c-39a8-4489-8e1f-8a6ca15cce48 ==============================
+[0m20:50:32.445496 [info ] [MainThread]: Running with dbt=1.7.9
+[0m20:50:32.446521 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\asti\\Documents\\GitHub\\Data_warehouse_assignment_4', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\asti\\Documents\\GitHub\\Data_warehouse_assignment_4\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:50:32.447808 [info ] [MainThread]: dbt version: 1.7.9
+[0m20:50:32.448893 [info ] [MainThread]: python version: 3.9.6
+[0m20:50:32.448893 [info ] [MainThread]: python path: C:\Users\asti\AppData\Local\Programs\Python\Python39\python.exe
+[0m20:50:32.450031 [info ] [MainThread]: os info: Windows-10-10.0.22631-SP0
+[0m20:50:32.612661 [info ] [MainThread]: Using profiles dir at C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4
+[0m20:50:32.614377 [info ] [MainThread]: Using profiles.yml file at C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4\profiles.yml
+[0m20:50:32.614377 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4\dbt_project.yml
+[0m20:50:32.615600 [info ] [MainThread]: adapter type: duckdb
+[0m20:50:32.616905 [info ] [MainThread]: adapter version: 1.7.3
+[0m20:50:32.725071 [info ] [MainThread]: Configuration:
+[0m20:50:32.725071 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:50:32.726250 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:50:32.727251 [info ] [MainThread]: Required dependencies:
+[0m20:50:32.727251 [debug] [MainThread]: Executing "git --help"
+[0m20:50:32.780045 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:50:32.781131 [debug] [MainThread]: STDERR: "b''"
+[0m20:50:32.781668 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:50:32.783955 [info ] [MainThread]: Connection:
+[0m20:50:32.783955 [info ] [MainThread]:   database: data_warehouse
+[0m20:50:32.784979 [info ] [MainThread]:   schema: main
+[0m20:50:32.784979 [info ] [MainThread]:   path: data_warehouse.duckdb
+[0m20:50:32.786033 [info ] [MainThread]:   config_options: None
+[0m20:50:32.786033 [info ] [MainThread]:   extensions: None
+[0m20:50:32.787137 [info ] [MainThread]:   settings: None
+[0m20:50:32.787137 [info ] [MainThread]:   external_root: .
+[0m20:50:32.788281 [info ] [MainThread]:   use_credential_provider: None
+[0m20:50:32.788281 [info ] [MainThread]:   attach: None
+[0m20:50:32.789342 [info ] [MainThread]:   filesystems: None
+[0m20:50:32.790404 [info ] [MainThread]:   remote: None
+[0m20:50:32.790404 [info ] [MainThread]:   plugins: None
+[0m20:50:32.791587 [info ] [MainThread]:   disable_transactions: False
+[0m20:50:32.792588 [info ] [MainThread]: Registered adapter: duckdb=1.7.3
+[0m20:50:32.793634 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m20:50:32.793634 [debug] [MainThread]: Using duckdb connection "debug"
+[0m20:50:32.794790 [debug] [MainThread]: On debug: select 1 as id
+[0m20:50:32.794848 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:50:32.804741 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m20:50:32.805882 [debug] [MainThread]: On debug: Close
+[0m20:50:32.808167 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:50:32.808167 [info ] [MainThread]: [32mAll checks passed![0m
+[0m20:50:32.809317 [debug] [MainThread]: Command `dbt debug` succeeded at 20:50:32.809317 after 0.47 seconds
+[0m20:50:32.810463 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:50:32.810463 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E24E3DBAF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E250DB32E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E250E33AF0>]}
+[0m20:50:32.811545 [debug] [MainThread]: Flushing usage events
+[0m20:52:54.099654 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B97A7EA160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B979FB4220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B979FB4400>]}
+
+
+============================== 20:52:54.104692 | 1d6e14e0-2edc-458b-96a3-ff39efff7a5b ==============================
+[0m20:52:54.104692 [info ] [MainThread]: Running with dbt=1.7.9
+[0m20:52:54.104692 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\asti\\Documents\\GitHub\\Data_warehouse_assignment_4\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\asti\\Documents\\GitHub\\Data_warehouse_assignment_4', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt build', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m20:52:54.445860 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1d6e14e0-2edc-458b-96a3-ff39efff7a5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B97D1C1790>]}
+[0m20:52:54.575057 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1d6e14e0-2edc-458b-96a3-ff39efff7a5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B979FEBE80>]}
+[0m20:52:54.578152 [info ] [MainThread]: Registered adapter: duckdb=1.7.3
+[0m20:52:54.587760 [debug] [MainThread]: checksum: 6ff0d83c3b46f350064523b4e08d9241403ad71d606ba49c4e670afba3668b39, vars: {}, profile: , target: , version: 1.7.9
+[0m20:52:54.588813 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m20:52:54.589865 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '1d6e14e0-2edc-458b-96a3-ff39efff7a5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B97D2FB400>]}
+[0m20:52:55.796066 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.Data_warehouse_assignment_4.staging
+- models.Data_warehouse_assignment_4
+[0m20:52:55.804742 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1d6e14e0-2edc-458b-96a3-ff39efff7a5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B97D513F40>]}
+[0m20:52:55.832272 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1d6e14e0-2edc-458b-96a3-ff39efff7a5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B97D5132E0>]}
+[0m20:52:55.833328 [info ] [MainThread]: Found 5 seeds, 0 sources, 0 exposures, 0 metrics, 391 macros, 0 groups, 0 semantic models
+[0m20:52:55.836271 [info ] [MainThread]: 
+[0m20:52:55.838272 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m20:52:55.840271 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_data_warehouse'
+[0m20:52:55.859306 [debug] [ThreadPool]: Using duckdb connection "list_data_warehouse"
+[0m20:52:55.860305 [debug] [ThreadPool]: On list_data_warehouse: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "Data_warehouse_assignment_4", "target_name": "dev", "connection_name": "list_data_warehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"data_warehouse"'
+    
+  
+  
+[0m20:52:55.861307 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:52:55.872375 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m20:52:55.874376 [debug] [ThreadPool]: On list_data_warehouse: Close
+[0m20:52:55.878375 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_data_warehouse, now create_data_warehouse_main)
+[0m20:52:55.880375 [debug] [ThreadPool]: Creating schema "database: "data_warehouse"
+schema: "main"
+"
+[0m20:52:55.890375 [debug] [ThreadPool]: Using duckdb connection "create_data_warehouse_main"
+[0m20:52:55.891374 [debug] [ThreadPool]: On create_data_warehouse_main: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "Data_warehouse_assignment_4", "target_name": "dev", "connection_name": "create_data_warehouse_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='data_warehouse'
+        and type='sqlite'
+    
+  
+[0m20:52:55.891374 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:52:55.900732 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m20:52:55.902733 [debug] [ThreadPool]: Using duckdb connection "create_data_warehouse_main"
+[0m20:52:55.902733 [debug] [ThreadPool]: On create_data_warehouse_main: BEGIN
+[0m20:52:55.904917 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m20:52:55.904917 [debug] [ThreadPool]: Using duckdb connection "create_data_warehouse_main"
+[0m20:52:55.904917 [debug] [ThreadPool]: On create_data_warehouse_main: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "Data_warehouse_assignment_4", "target_name": "dev", "connection_name": "create_data_warehouse_main"} */
+
+    
+    
+        create schema if not exists "data_warehouse"."main"
+    
+[0m20:52:55.906004 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m20:52:55.907007 [debug] [ThreadPool]: On create_data_warehouse_main: COMMIT
+[0m20:52:55.907007 [debug] [ThreadPool]: Using duckdb connection "create_data_warehouse_main"
+[0m20:52:55.908012 [debug] [ThreadPool]: On create_data_warehouse_main: COMMIT
+[0m20:52:55.908012 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m20:52:55.908985 [debug] [ThreadPool]: On create_data_warehouse_main: Close
+[0m20:52:55.913352 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_data_warehouse_main'
+[0m20:52:55.921347 [debug] [ThreadPool]: Using duckdb connection "list_data_warehouse_main"
+[0m20:52:55.921347 [debug] [ThreadPool]: On list_data_warehouse_main: BEGIN
+[0m20:52:55.922404 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:52:55.930686 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m20:52:55.931615 [debug] [ThreadPool]: Using duckdb connection "list_data_warehouse_main"
+[0m20:52:55.931615 [debug] [ThreadPool]: On list_data_warehouse_main: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "Data_warehouse_assignment_4", "target_name": "dev", "connection_name": "list_data_warehouse_main"} */
+select
+      'data_warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'data_warehouse'
+  
+[0m20:52:55.965826 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m20:52:55.975146 [debug] [ThreadPool]: On list_data_warehouse_main: ROLLBACK
+[0m20:52:55.977302 [debug] [ThreadPool]: Failed to rollback 'list_data_warehouse_main'
+[0m20:52:55.978400 [debug] [ThreadPool]: On list_data_warehouse_main: Close
+[0m20:52:55.982686 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1d6e14e0-2edc-458b-96a3-ff39efff7a5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B97D6541F0>]}
+[0m20:52:55.983694 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:52:55.983694 [debug] [MainThread]: On master: BEGIN
+[0m20:52:55.984694 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:52:55.993094 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m20:52:55.994095 [debug] [MainThread]: On master: COMMIT
+[0m20:52:55.995099 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:52:55.995099 [debug] [MainThread]: On master: COMMIT
+[0m20:52:55.996097 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m20:52:55.997097 [debug] [MainThread]: On master: Close
+[0m20:52:55.999330 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:52:56.000255 [info ] [MainThread]: 
+[0m20:52:56.004257 [debug] [Thread-1  ]: Began running node seed.Data_warehouse_assignment_4.raw_discounts
+[0m20:52:56.005259 [info ] [Thread-1  ]: 1 of 5 START seed file main.raw_discounts ...................................... [RUN]
+[0m20:52:56.007258 [debug] [Thread-1  ]: Acquiring new duckdb connection 'seed.Data_warehouse_assignment_4.raw_discounts'
+[0m20:52:56.007258 [debug] [Thread-1  ]: Began compiling node seed.Data_warehouse_assignment_4.raw_discounts
+[0m20:52:56.008258 [debug] [Thread-1  ]: Timing info for seed.Data_warehouse_assignment_4.raw_discounts (compile): 20:52:56.008258 => 20:52:56.008258
+[0m20:52:56.009258 [debug] [Thread-1  ]: Began executing node seed.Data_warehouse_assignment_4.raw_discounts
+[0m20:52:56.074301 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_discounts"
+[0m20:52:56.075437 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_discounts: BEGIN
+[0m20:52:56.076884 [debug] [Thread-1  ]: Opening a new connection, currently in state init
+[0m20:52:56.084834 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m20:52:56.084834 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_discounts"
+[0m20:52:56.084834 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_discounts: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "Data_warehouse_assignment_4", "target_name": "dev", "node_id": "seed.Data_warehouse_assignment_4.raw_discounts"} */
+
+    create table "data_warehouse"."main"."raw_discounts" ("product_id" text,"discounted_price" text,"discount_percentage" integer)
+  
+[0m20:52:56.086013 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m20:52:56.101080 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_discounts"
+[0m20:52:56.102081 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_discounts: 
+          COPY "data_warehouse"."main"."raw_discounts" FROM 'C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4\seeds\raw_discounts.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m20:52:56.125498 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m20:52:56.134908 [debug] [Thread-1  ]: Writing runtime SQL for node "seed.Data_warehouse_assignment_4.raw_discounts"
+[0m20:52:56.174590 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_discounts: COMMIT
+[0m20:52:56.175614 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_discounts"
+[0m20:52:56.175614 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_discounts: COMMIT
+[0m20:52:56.179313 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m20:52:56.180356 [debug] [Thread-1  ]: Timing info for seed.Data_warehouse_assignment_4.raw_discounts (execute): 20:52:56.010257 => 20:52:56.180356
+[0m20:52:56.181435 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_discounts: Close
+[0m20:52:56.195969 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1d6e14e0-2edc-458b-96a3-ff39efff7a5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B97D6A1D90>]}
+[0m20:52:56.196994 [info ] [Thread-1  ]: 1 of 5 OK loaded seed file main.raw_discounts .................................. [[32mINSERT 1465[0m in 0.19s]
+[0m20:52:56.198070 [debug] [Thread-1  ]: Finished running node seed.Data_warehouse_assignment_4.raw_discounts
+[0m20:52:56.199071 [debug] [Thread-1  ]: Began running node seed.Data_warehouse_assignment_4.raw_products
+[0m20:52:56.200133 [info ] [Thread-1  ]: 2 of 5 START seed file main.raw_products ....................................... [RUN]
+[0m20:52:56.201145 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly seed.Data_warehouse_assignment_4.raw_discounts, now seed.Data_warehouse_assignment_4.raw_products)
+[0m20:52:56.202157 [debug] [Thread-1  ]: Began compiling node seed.Data_warehouse_assignment_4.raw_products
+[0m20:52:56.203188 [debug] [Thread-1  ]: Timing info for seed.Data_warehouse_assignment_4.raw_products (compile): 20:52:56.202157 => 20:52:56.202157
+[0m20:52:56.203188 [debug] [Thread-1  ]: Began executing node seed.Data_warehouse_assignment_4.raw_products
+[0m20:52:56.254005 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_products"
+[0m20:52:56.255029 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_products: BEGIN
+[0m20:52:56.256052 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m20:52:56.264561 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m20:52:56.265624 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_products"
+[0m20:52:56.265624 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_products: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "Data_warehouse_assignment_4", "target_name": "dev", "node_id": "seed.Data_warehouse_assignment_4.raw_products"} */
+truncate table "data_warehouse"."main"."raw_products"
+[0m20:52:56.266624 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m20:52:56.268726 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_products"
+[0m20:52:56.268726 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_products: 
+          COPY "data_warehouse"."main"."raw_products" FROM 'C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4\seeds\raw_products.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m20:52:56.281321 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m20:52:56.282320 [debug] [Thread-1  ]: Writing runtime SQL for node "seed.Data_warehouse_assignment_4.raw_products"
+[0m20:52:56.285320 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_products: COMMIT
+[0m20:52:56.285320 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_products"
+[0m20:52:56.286320 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_products: COMMIT
+[0m20:52:56.294808 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m20:52:56.296848 [debug] [Thread-1  ]: Timing info for seed.Data_warehouse_assignment_4.raw_products (execute): 20:52:56.204239 => 20:52:56.295822
+[0m20:52:56.296848 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_products: Close
+[0m20:52:56.339127 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1d6e14e0-2edc-458b-96a3-ff39efff7a5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B97D7434C0>]}
+[0m20:52:56.340239 [info ] [Thread-1  ]: 2 of 5 OK loaded seed file main.raw_products ................................... [[32mINSERT 1465[0m in 0.14s]
+[0m20:52:56.341433 [debug] [Thread-1  ]: Finished running node seed.Data_warehouse_assignment_4.raw_products
+[0m20:52:56.342518 [debug] [Thread-1  ]: Began running node seed.Data_warehouse_assignment_4.raw_ratings
+[0m20:52:56.342518 [info ] [Thread-1  ]: 3 of 5 START seed file main.raw_ratings ........................................ [RUN]
+[0m20:52:56.344781 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly seed.Data_warehouse_assignment_4.raw_products, now seed.Data_warehouse_assignment_4.raw_ratings)
+[0m20:52:56.344781 [debug] [Thread-1  ]: Began compiling node seed.Data_warehouse_assignment_4.raw_ratings
+[0m20:52:56.345812 [debug] [Thread-1  ]: Timing info for seed.Data_warehouse_assignment_4.raw_ratings (compile): 20:52:56.345812 => 20:52:56.345812
+[0m20:52:56.346864 [debug] [Thread-1  ]: Began executing node seed.Data_warehouse_assignment_4.raw_ratings
+[0m20:52:56.400395 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_ratings"
+[0m20:52:56.401400 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_ratings: BEGIN
+[0m20:52:56.401400 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m20:52:56.415833 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m20:52:56.416880 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_ratings"
+[0m20:52:56.418880 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_ratings: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "Data_warehouse_assignment_4", "target_name": "dev", "node_id": "seed.Data_warehouse_assignment_4.raw_ratings"} */
+
+    create table "data_warehouse"."main"."raw_ratings" ("product_id" text,"rating" text,"rating_count" integer)
+  
+[0m20:52:56.419880 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m20:52:56.423108 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_ratings"
+[0m20:52:56.424320 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_ratings: 
+          COPY "data_warehouse"."main"."raw_ratings" FROM 'C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4\seeds\raw_ratings.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m20:52:56.483652 [debug] [Thread-1  ]: Timing info for seed.Data_warehouse_assignment_4.raw_ratings (execute): 20:52:56.347862 => 20:52:56.482652
+[0m20:52:56.484880 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_ratings: ROLLBACK
+[0m20:52:56.490011 [debug] [Thread-1  ]: Failed to rollback 'seed.Data_warehouse_assignment_4.raw_ratings'
+[0m20:52:56.490011 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_ratings: Close
+[0m20:52:56.495115 [debug] [Thread-1  ]: Runtime Error in seed raw_ratings (seeds\raw_ratings.csv)
+  Conversion Error: CSV Error on Line: 2
+  Error when converting column "rating_count".
+  Could not convert string "24,269" to 'INTEGER'
+  
+    file=C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4\seeds\raw_ratings.csv
+    delimiter = , (Set By User)
+    quote = " (Auto-Detected)
+    escape = " (Auto-Detected)
+    new_line = \r\n (Auto-Detected)
+    header = true (Set By User)
+    skip_rows = 0 (Auto-Detected)
+    date_format =  (Auto-Detected)
+    timestamp_format =  (Auto-Detected)
+    null_padding=0
+    sample_size=20480
+    ignore_errors=0
+    all_varchar=0
+  
+[0m20:52:56.496115 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1d6e14e0-2edc-458b-96a3-ff39efff7a5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B97D68F070>]}
+[0m20:52:56.498480 [error] [Thread-1  ]: 3 of 5 ERROR loading seed file main.raw_ratings ................................ [[31mERROR[0m in 0.15s]
+[0m20:52:56.499538 [debug] [Thread-1  ]: Finished running node seed.Data_warehouse_assignment_4.raw_ratings
+[0m20:52:56.500595 [debug] [Thread-1  ]: Began running node seed.Data_warehouse_assignment_4.raw_reviews
+[0m20:52:56.501595 [info ] [Thread-1  ]: 4 of 5 START seed file main.raw_reviews ........................................ [RUN]
+[0m20:52:56.502645 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly seed.Data_warehouse_assignment_4.raw_ratings, now seed.Data_warehouse_assignment_4.raw_reviews)
+[0m20:52:56.503651 [debug] [Thread-1  ]: Began compiling node seed.Data_warehouse_assignment_4.raw_reviews
+[0m20:52:56.503651 [debug] [Thread-1  ]: Timing info for seed.Data_warehouse_assignment_4.raw_reviews (compile): 20:52:56.503651 => 20:52:56.503651
+[0m20:52:56.504651 [debug] [Thread-1  ]: Began executing node seed.Data_warehouse_assignment_4.raw_reviews
+[0m20:52:56.657048 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_reviews"
+[0m20:52:56.658049 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_reviews: BEGIN
+[0m20:52:56.658049 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m20:52:56.672756 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m20:52:56.673785 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_reviews"
+[0m20:52:56.674784 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_reviews: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "Data_warehouse_assignment_4", "target_name": "dev", "node_id": "seed.Data_warehouse_assignment_4.raw_reviews"} */
+truncate table "data_warehouse"."main"."raw_reviews"
+[0m20:52:56.677134 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m20:52:56.680739 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_reviews"
+[0m20:52:56.680739 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_reviews: 
+          COPY "data_warehouse"."main"."raw_reviews" FROM 'C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4\seeds\raw_reviews.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m20:52:56.735513 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m20:52:56.736779 [debug] [Thread-1  ]: Writing runtime SQL for node "seed.Data_warehouse_assignment_4.raw_reviews"
+[0m20:52:56.742168 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_reviews: COMMIT
+[0m20:52:56.744168 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_reviews"
+[0m20:52:56.746846 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_reviews: COMMIT
+[0m20:52:56.798572 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m20:52:56.801137 [debug] [Thread-1  ]: Timing info for seed.Data_warehouse_assignment_4.raw_reviews (execute): 20:52:56.505758 => 20:52:56.800052
+[0m20:52:56.801137 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_reviews: Close
+[0m20:52:56.939119 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1d6e14e0-2edc-458b-96a3-ff39efff7a5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B97E90E370>]}
+[0m20:52:56.940800 [info ] [Thread-1  ]: 4 of 5 OK loaded seed file main.raw_reviews .................................... [[32mINSERT 1465[0m in 0.44s]
+[0m20:52:56.943462 [debug] [Thread-1  ]: Finished running node seed.Data_warehouse_assignment_4.raw_reviews
+[0m20:52:56.944469 [debug] [Thread-1  ]: Began running node seed.Data_warehouse_assignment_4.raw_users
+[0m20:52:56.945830 [info ] [Thread-1  ]: 5 of 5 START seed file main.raw_users .......................................... [RUN]
+[0m20:52:56.953196 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly seed.Data_warehouse_assignment_4.raw_reviews, now seed.Data_warehouse_assignment_4.raw_users)
+[0m20:52:56.955727 [debug] [Thread-1  ]: Began compiling node seed.Data_warehouse_assignment_4.raw_users
+[0m20:52:56.957076 [debug] [Thread-1  ]: Timing info for seed.Data_warehouse_assignment_4.raw_users (compile): 20:52:56.957076 => 20:52:56.957076
+[0m20:52:56.958477 [debug] [Thread-1  ]: Began executing node seed.Data_warehouse_assignment_4.raw_users
+[0m20:52:56.997755 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_users"
+[0m20:52:56.998766 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_users: BEGIN
+[0m20:52:56.998766 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m20:52:57.007154 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m20:52:57.008163 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_users"
+[0m20:52:57.008163 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_users: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "Data_warehouse_assignment_4", "target_name": "dev", "node_id": "seed.Data_warehouse_assignment_4.raw_users"} */
+truncate table "data_warehouse"."main"."raw_users"
+[0m20:52:57.009176 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m20:52:57.011519 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_users"
+[0m20:52:57.012530 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_users: 
+          COPY "data_warehouse"."main"."raw_users" FROM 'C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4\seeds\raw_users.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m20:52:57.019609 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m20:52:57.020620 [debug] [Thread-1  ]: Writing runtime SQL for node "seed.Data_warehouse_assignment_4.raw_users"
+[0m20:52:57.023649 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_users: COMMIT
+[0m20:52:57.023649 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_users"
+[0m20:52:57.024659 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_users: COMMIT
+[0m20:52:57.031281 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m20:52:57.032293 [debug] [Thread-1  ]: Timing info for seed.Data_warehouse_assignment_4.raw_users (execute): 20:52:56.959529 => 20:52:57.032293
+[0m20:52:57.033303 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_users: Close
+[0m20:52:57.068690 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1d6e14e0-2edc-458b-96a3-ff39efff7a5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B97E91F940>]}
+[0m20:52:57.070691 [info ] [Thread-1  ]: 5 of 5 OK loaded seed file main.raw_users ...................................... [[32mINSERT 1194[0m in 0.12s]
+[0m20:52:57.071690 [debug] [Thread-1  ]: Finished running node seed.Data_warehouse_assignment_4.raw_users
+[0m20:52:57.076186 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:52:57.077187 [debug] [MainThread]: On master: BEGIN
+[0m20:52:57.078185 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:52:57.092177 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m20:52:57.093177 [debug] [MainThread]: On master: COMMIT
+[0m20:52:57.094177 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:52:57.095572 [debug] [MainThread]: On master: COMMIT
+[0m20:52:57.096584 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m20:52:57.096584 [debug] [MainThread]: On master: Close
+[0m20:52:57.099891 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:52:57.099891 [debug] [MainThread]: Connection 'create_data_warehouse_main' was properly closed.
+[0m20:52:57.100916 [debug] [MainThread]: Connection 'list_data_warehouse_main' was properly closed.
+[0m20:52:57.100916 [debug] [MainThread]: Connection 'seed.Data_warehouse_assignment_4.raw_users' was properly closed.
+[0m20:52:57.101939 [info ] [MainThread]: 
+[0m20:52:57.102961 [info ] [MainThread]: Finished running 5 seeds in 0 hours 0 minutes and 1.26 seconds (1.26s).
+[0m20:52:57.105954 [debug] [MainThread]: Command end result
+[0m20:52:57.130036 [info ] [MainThread]: 
+[0m20:52:57.132047 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m20:52:57.134781 [info ] [MainThread]: 
+[0m20:52:57.136189 [error] [MainThread]:   Runtime Error in seed raw_ratings (seeds\raw_ratings.csv)
+  Conversion Error: CSV Error on Line: 2
+  Error when converting column "rating_count".
+  Could not convert string "24,269" to 'INTEGER'
+  
+    file=C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4\seeds\raw_ratings.csv
+    delimiter = , (Set By User)
+    quote = " (Auto-Detected)
+    escape = " (Auto-Detected)
+    new_line = \r\n (Auto-Detected)
+    header = true (Set By User)
+    skip_rows = 0 (Auto-Detected)
+    date_format =  (Auto-Detected)
+    timestamp_format =  (Auto-Detected)
+    null_padding=0
+    sample_size=20480
+    ignore_errors=0
+    all_varchar=0
+  
+[0m20:52:57.137316 [info ] [MainThread]: 
+[0m20:52:57.138336 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=1 SKIP=0 TOTAL=5
+[0m20:52:57.140562 [debug] [MainThread]: Command `dbt build` failed at 20:52:57.140562 after 3.15 seconds
+[0m20:52:57.141562 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B97A7EA160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B979FEBE80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B97D508580>]}
+[0m20:52:57.142562 [debug] [MainThread]: Flushing usage events
+[0m22:27:44.885887 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017C2F6DA370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017C2EEA44C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017C2EE71A30>]}
+
+
+============================== 22:27:44.896764 | b6bf96b8-3afa-4668-85e6-aec4d84aeec6 ==============================
+[0m22:27:44.896764 [info ] [MainThread]: Running with dbt=1.7.9
+[0m22:27:44.896764 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\asti\\Documents\\GitHub\\Data_warehouse_assignment_4', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\asti\\Documents\\GitHub\\Data_warehouse_assignment_4\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m22:27:44.897990 [info ] [MainThread]: dbt version: 1.7.9
+[0m22:27:44.898991 [info ] [MainThread]: python version: 3.9.6
+[0m22:27:44.898991 [info ] [MainThread]: python path: C:\Users\asti\AppData\Local\Programs\Python\Python39\python.exe
+[0m22:27:44.900011 [info ] [MainThread]: os info: Windows-10-10.0.22631-SP0
+[0m22:27:45.115957 [info ] [MainThread]: Using profiles dir at C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4
+[0m22:27:45.116983 [info ] [MainThread]: Using profiles.yml file at C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4\profiles.yml
+[0m22:27:45.118018 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4\dbt_project.yml
+[0m22:27:45.121208 [info ] [MainThread]: adapter type: duckdb
+[0m22:27:45.122249 [info ] [MainThread]: adapter version: 1.7.3
+[0m22:27:45.237297 [info ] [MainThread]: Configuration:
+[0m22:27:45.237350 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m22:27:45.238816 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m22:27:45.238816 [info ] [MainThread]: Required dependencies:
+[0m22:27:45.239892 [debug] [MainThread]: Executing "git --help"
+[0m22:27:45.290976 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m22:27:45.292124 [debug] [MainThread]: STDERR: "b''"
+[0m22:27:45.292124 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m22:27:45.293178 [info ] [MainThread]: Connection:
+[0m22:27:45.294232 [info ] [MainThread]:   database: data_warehouse
+[0m22:27:45.294232 [info ] [MainThread]:   schema: main
+[0m22:27:45.295331 [info ] [MainThread]:   path: data_warehouse.duckdb
+[0m22:27:45.296408 [info ] [MainThread]:   config_options: None
+[0m22:27:45.296408 [info ] [MainThread]:   extensions: None
+[0m22:27:45.297410 [info ] [MainThread]:   settings: None
+[0m22:27:45.297410 [info ] [MainThread]:   external_root: .
+[0m22:27:45.298506 [info ] [MainThread]:   use_credential_provider: None
+[0m22:27:45.299601 [info ] [MainThread]:   attach: None
+[0m22:27:45.300631 [info ] [MainThread]:   filesystems: None
+[0m22:27:45.300631 [info ] [MainThread]:   remote: None
+[0m22:27:45.301753 [info ] [MainThread]:   plugins: None
+[0m22:27:45.302755 [info ] [MainThread]:   disable_transactions: False
+[0m22:27:45.302755 [info ] [MainThread]: Registered adapter: duckdb=1.7.3
+[0m22:27:45.303876 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m22:27:45.305877 [debug] [MainThread]: Using duckdb connection "debug"
+[0m22:27:45.305877 [debug] [MainThread]: On debug: select 1 as id
+[0m22:27:45.306639 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:27:45.318590 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m22:27:45.319718 [debug] [MainThread]: On debug: Close
+[0m22:27:45.322241 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m22:27:45.324357 [info ] [MainThread]: [32mAll checks passed![0m
+[0m22:27:45.326555 [debug] [MainThread]: Command `dbt debug` succeeded at 22:27:45.326555 after 0.54 seconds
+[0m22:27:45.327657 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m22:27:45.328659 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017C2F6DA370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017C32182190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017C321F9D30>]}
+[0m22:27:45.328717 [debug] [MainThread]: Flushing usage events
+[0m22:27:56.197479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197F289B160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197F2064220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197F2064400>]}
+
+
+============================== 22:27:56.205467 | 2c16b972-9925-4edd-9fd4-8e354dc52e99 ==============================
+[0m22:27:56.205467 [info ] [MainThread]: Running with dbt=1.7.9
+[0m22:27:56.206564 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\asti\\Documents\\GitHub\\Data_warehouse_assignment_4', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\asti\\Documents\\GitHub\\Data_warehouse_assignment_4\\logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt build', 'send_anonymous_usage_stats': 'True'}
+[0m22:27:56.577558 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2c16b972-9925-4edd-9fd4-8e354dc52e99', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197F5271790>]}
+[0m22:27:56.704080 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2c16b972-9925-4edd-9fd4-8e354dc52e99', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197F209BE80>]}
+[0m22:27:56.705219 [info ] [MainThread]: Registered adapter: duckdb=1.7.3
+[0m22:27:56.718088 [debug] [MainThread]: checksum: 6ff0d83c3b46f350064523b4e08d9241403ad71d606ba49c4e670afba3668b39, vars: {}, profile: , target: , version: 1.7.9
+[0m22:27:56.797864 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m22:27:56.798955 [debug] [MainThread]: Partial parsing: updated file: Data_warehouse_assignment_4://seeds\raw_ratings.csv
+[0m22:27:56.951935 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.Data_warehouse_assignment_4
+- models.Data_warehouse_assignment_4.staging
+[0m22:27:56.960503 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2c16b972-9925-4edd-9fd4-8e354dc52e99', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197F574D0D0>]}
+[0m22:27:56.976429 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2c16b972-9925-4edd-9fd4-8e354dc52e99', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197F54EB5B0>]}
+[0m22:27:56.977505 [info ] [MainThread]: Found 5 seeds, 0 sources, 0 exposures, 0 metrics, 391 macros, 0 groups, 0 semantic models
+[0m22:27:56.979584 [info ] [MainThread]: 
+[0m22:27:56.980704 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m22:27:56.981737 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_data_warehouse'
+[0m22:27:57.000368 [debug] [ThreadPool]: Using duckdb connection "list_data_warehouse"
+[0m22:27:57.001447 [debug] [ThreadPool]: On list_data_warehouse: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "Data_warehouse_assignment_4", "target_name": "dev", "connection_name": "list_data_warehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"data_warehouse"'
+    
+  
+  
+[0m22:27:57.001447 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:27:57.014733 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m22:27:57.016910 [debug] [ThreadPool]: On list_data_warehouse: Close
+[0m22:27:57.023230 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_data_warehouse, now create_data_warehouse_main)
+[0m22:27:57.024849 [debug] [ThreadPool]: Creating schema "database: "data_warehouse"
+schema: "main"
+"
+[0m22:27:57.033154 [debug] [ThreadPool]: Using duckdb connection "create_data_warehouse_main"
+[0m22:27:57.033154 [debug] [ThreadPool]: On create_data_warehouse_main: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "Data_warehouse_assignment_4", "target_name": "dev", "connection_name": "create_data_warehouse_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='data_warehouse'
+        and type='sqlite'
+    
+  
+[0m22:27:57.034193 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:27:57.045050 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m22:27:57.047132 [debug] [ThreadPool]: Using duckdb connection "create_data_warehouse_main"
+[0m22:27:57.047132 [debug] [ThreadPool]: On create_data_warehouse_main: BEGIN
+[0m22:27:57.048176 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m22:27:57.048176 [debug] [ThreadPool]: Using duckdb connection "create_data_warehouse_main"
+[0m22:27:57.049224 [debug] [ThreadPool]: On create_data_warehouse_main: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "Data_warehouse_assignment_4", "target_name": "dev", "connection_name": "create_data_warehouse_main"} */
+
+    
+    
+        create schema if not exists "data_warehouse"."main"
+    
+[0m22:27:57.049224 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m22:27:57.050272 [debug] [ThreadPool]: On create_data_warehouse_main: COMMIT
+[0m22:27:57.050272 [debug] [ThreadPool]: Using duckdb connection "create_data_warehouse_main"
+[0m22:27:57.051319 [debug] [ThreadPool]: On create_data_warehouse_main: COMMIT
+[0m22:27:57.051319 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m22:27:57.052369 [debug] [ThreadPool]: On create_data_warehouse_main: Close
+[0m22:27:57.058192 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_data_warehouse_main'
+[0m22:27:57.064631 [debug] [ThreadPool]: Using duckdb connection "list_data_warehouse_main"
+[0m22:27:57.064631 [debug] [ThreadPool]: On list_data_warehouse_main: BEGIN
+[0m22:27:57.065700 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:27:57.074278 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m22:27:57.075385 [debug] [ThreadPool]: Using duckdb connection "list_data_warehouse_main"
+[0m22:27:57.075385 [debug] [ThreadPool]: On list_data_warehouse_main: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "Data_warehouse_assignment_4", "target_name": "dev", "connection_name": "list_data_warehouse_main"} */
+select
+      'data_warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'data_warehouse'
+  
+[0m22:27:57.109557 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m22:27:57.115809 [debug] [ThreadPool]: On list_data_warehouse_main: ROLLBACK
+[0m22:27:57.118914 [debug] [ThreadPool]: Failed to rollback 'list_data_warehouse_main'
+[0m22:27:57.119984 [debug] [ThreadPool]: On list_data_warehouse_main: Close
+[0m22:27:57.124070 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2c16b972-9925-4edd-9fd4-8e354dc52e99', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197F5382190>]}
+[0m22:27:57.124070 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:27:57.125114 [debug] [MainThread]: On master: BEGIN
+[0m22:27:57.125114 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:27:57.133720 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m22:27:57.133720 [debug] [MainThread]: On master: COMMIT
+[0m22:27:57.134772 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:27:57.134772 [debug] [MainThread]: On master: COMMIT
+[0m22:27:57.135776 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m22:27:57.135776 [debug] [MainThread]: On master: Close
+[0m22:27:57.139008 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:27:57.140028 [info ] [MainThread]: 
+[0m22:27:57.145278 [debug] [Thread-1  ]: Began running node seed.Data_warehouse_assignment_4.raw_discounts
+[0m22:27:57.145278 [info ] [Thread-1  ]: 1 of 5 START seed file main.raw_discounts ...................................... [RUN]
+[0m22:27:57.147406 [debug] [Thread-1  ]: Acquiring new duckdb connection 'seed.Data_warehouse_assignment_4.raw_discounts'
+[0m22:27:57.147406 [debug] [Thread-1  ]: Began compiling node seed.Data_warehouse_assignment_4.raw_discounts
+[0m22:27:57.148437 [debug] [Thread-1  ]: Timing info for seed.Data_warehouse_assignment_4.raw_discounts (compile): 22:27:57.148437 => 22:27:57.148437
+[0m22:27:57.148437 [debug] [Thread-1  ]: Began executing node seed.Data_warehouse_assignment_4.raw_discounts
+[0m22:27:57.207163 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_discounts"
+[0m22:27:57.208189 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_discounts: BEGIN
+[0m22:27:57.209239 [debug] [Thread-1  ]: Opening a new connection, currently in state init
+[0m22:27:57.216956 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m22:27:57.216956 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_discounts"
+[0m22:27:57.218064 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_discounts: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "Data_warehouse_assignment_4", "target_name": "dev", "node_id": "seed.Data_warehouse_assignment_4.raw_discounts"} */
+truncate table "data_warehouse"."main"."raw_discounts"
+[0m22:27:57.219065 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m22:27:57.233913 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_discounts"
+[0m22:27:57.234960 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_discounts: 
+          COPY "data_warehouse"."main"."raw_discounts" FROM 'C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4\seeds\raw_discounts.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m22:27:57.241640 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m22:27:57.249048 [debug] [Thread-1  ]: Writing runtime SQL for node "seed.Data_warehouse_assignment_4.raw_discounts"
+[0m22:27:57.267047 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_discounts: COMMIT
+[0m22:27:57.268093 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_discounts"
+[0m22:27:57.268093 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_discounts: COMMIT
+[0m22:27:57.284544 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m22:27:57.286860 [debug] [Thread-1  ]: Timing info for seed.Data_warehouse_assignment_4.raw_discounts (execute): 22:27:57.148437 => 22:27:57.286794
+[0m22:27:57.287859 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_discounts: Close
+[0m22:27:57.304142 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2c16b972-9925-4edd-9fd4-8e354dc52e99', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197F5854430>]}
+[0m22:27:57.305195 [info ] [Thread-1  ]: 1 of 5 OK loaded seed file main.raw_discounts .................................. [[32mINSERT 1465[0m in 0.16s]
+[0m22:27:57.307372 [debug] [Thread-1  ]: Finished running node seed.Data_warehouse_assignment_4.raw_discounts
+[0m22:27:57.308442 [debug] [Thread-1  ]: Began running node seed.Data_warehouse_assignment_4.raw_products
+[0m22:27:57.308442 [info ] [Thread-1  ]: 2 of 5 START seed file main.raw_products ....................................... [RUN]
+[0m22:27:57.309571 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly seed.Data_warehouse_assignment_4.raw_discounts, now seed.Data_warehouse_assignment_4.raw_products)
+[0m22:27:57.310741 [debug] [Thread-1  ]: Began compiling node seed.Data_warehouse_assignment_4.raw_products
+[0m22:27:57.311772 [debug] [Thread-1  ]: Timing info for seed.Data_warehouse_assignment_4.raw_products (compile): 22:27:57.310741 => 22:27:57.310741
+[0m22:27:57.311831 [debug] [Thread-1  ]: Began executing node seed.Data_warehouse_assignment_4.raw_products
+[0m22:27:57.346905 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_products"
+[0m22:27:57.346905 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_products: BEGIN
+[0m22:27:57.347959 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:27:57.356878 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m22:27:57.357877 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_products"
+[0m22:27:57.357877 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_products: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "Data_warehouse_assignment_4", "target_name": "dev", "node_id": "seed.Data_warehouse_assignment_4.raw_products"} */
+truncate table "data_warehouse"."main"."raw_products"
+[0m22:27:57.358941 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m22:27:57.361004 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_products"
+[0m22:27:57.361004 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_products: 
+          COPY "data_warehouse"."main"."raw_products" FROM 'C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4\seeds\raw_products.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m22:27:57.371857 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m22:27:57.372951 [debug] [Thread-1  ]: Writing runtime SQL for node "seed.Data_warehouse_assignment_4.raw_products"
+[0m22:27:57.376019 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_products: COMMIT
+[0m22:27:57.377018 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_products"
+[0m22:27:57.377018 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_products: COMMIT
+[0m22:27:57.384934 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m22:27:57.387349 [debug] [Thread-1  ]: Timing info for seed.Data_warehouse_assignment_4.raw_products (execute): 22:27:57.311831 => 22:27:57.386337
+[0m22:27:57.387349 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_products: Close
+[0m22:27:57.423510 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2c16b972-9925-4edd-9fd4-8e354dc52e99', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197F5823EE0>]}
+[0m22:27:57.424631 [info ] [Thread-1  ]: 2 of 5 OK loaded seed file main.raw_products ................................... [[32mINSERT 1465[0m in 0.11s]
+[0m22:27:57.425726 [debug] [Thread-1  ]: Finished running node seed.Data_warehouse_assignment_4.raw_products
+[0m22:27:57.426728 [debug] [Thread-1  ]: Began running node seed.Data_warehouse_assignment_4.raw_ratings
+[0m22:27:57.426728 [info ] [Thread-1  ]: 3 of 5 START seed file main.raw_ratings ........................................ [RUN]
+[0m22:27:57.427846 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly seed.Data_warehouse_assignment_4.raw_products, now seed.Data_warehouse_assignment_4.raw_ratings)
+[0m22:27:57.428952 [debug] [Thread-1  ]: Began compiling node seed.Data_warehouse_assignment_4.raw_ratings
+[0m22:27:57.428952 [debug] [Thread-1  ]: Timing info for seed.Data_warehouse_assignment_4.raw_ratings (compile): 22:27:57.428952 => 22:27:57.428952
+[0m22:27:57.430137 [debug] [Thread-1  ]: Began executing node seed.Data_warehouse_assignment_4.raw_ratings
+[0m22:27:57.464075 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_ratings"
+[0m22:27:57.465158 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_ratings: BEGIN
+[0m22:27:57.466191 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:27:57.473743 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m22:27:57.473743 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_ratings"
+[0m22:27:57.474814 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_ratings: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "Data_warehouse_assignment_4", "target_name": "dev", "node_id": "seed.Data_warehouse_assignment_4.raw_ratings"} */
+
+    create table "data_warehouse"."main"."raw_ratings" ("product_id" text,"rating" text,"rating_count" integer)
+  
+[0m22:27:57.475816 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m22:27:57.478088 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_ratings"
+[0m22:27:57.479088 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_ratings: 
+          COPY "data_warehouse"."main"."raw_ratings" FROM 'C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4\seeds\raw_ratings.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m22:27:57.508594 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m22:27:57.509656 [debug] [Thread-1  ]: Writing runtime SQL for node "seed.Data_warehouse_assignment_4.raw_ratings"
+[0m22:27:57.517137 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_ratings: COMMIT
+[0m22:27:57.518208 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_ratings"
+[0m22:27:57.518208 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_ratings: COMMIT
+[0m22:27:57.521953 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m22:27:57.523032 [debug] [Thread-1  ]: Timing info for seed.Data_warehouse_assignment_4.raw_ratings (execute): 22:27:57.430137 => 22:27:57.523032
+[0m22:27:57.524121 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_ratings: Close
+[0m22:27:57.536134 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2c16b972-9925-4edd-9fd4-8e354dc52e99', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197F5849A30>]}
+[0m22:27:57.537276 [info ] [Thread-1  ]: 3 of 5 OK loaded seed file main.raw_ratings .................................... [[32mINSERT 1465[0m in 0.11s]
+[0m22:27:57.538911 [debug] [Thread-1  ]: Finished running node seed.Data_warehouse_assignment_4.raw_ratings
+[0m22:27:57.540912 [debug] [Thread-1  ]: Began running node seed.Data_warehouse_assignment_4.raw_reviews
+[0m22:27:57.541914 [info ] [Thread-1  ]: 4 of 5 START seed file main.raw_reviews ........................................ [RUN]
+[0m22:27:57.543974 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly seed.Data_warehouse_assignment_4.raw_ratings, now seed.Data_warehouse_assignment_4.raw_reviews)
+[0m22:27:57.543974 [debug] [Thread-1  ]: Began compiling node seed.Data_warehouse_assignment_4.raw_reviews
+[0m22:27:57.545085 [debug] [Thread-1  ]: Timing info for seed.Data_warehouse_assignment_4.raw_reviews (compile): 22:27:57.543974 => 22:27:57.543974
+[0m22:27:57.545085 [debug] [Thread-1  ]: Began executing node seed.Data_warehouse_assignment_4.raw_reviews
+[0m22:27:57.678670 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_reviews"
+[0m22:27:57.679850 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_reviews: BEGIN
+[0m22:27:57.679850 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:27:57.688968 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m22:27:57.689998 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_reviews"
+[0m22:27:57.690069 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_reviews: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "Data_warehouse_assignment_4", "target_name": "dev", "node_id": "seed.Data_warehouse_assignment_4.raw_reviews"} */
+truncate table "data_warehouse"."main"."raw_reviews"
+[0m22:27:57.691124 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m22:27:57.693200 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_reviews"
+[0m22:27:57.693265 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_reviews: 
+          COPY "data_warehouse"."main"."raw_reviews" FROM 'C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4\seeds\raw_reviews.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m22:27:57.721810 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m22:27:57.722863 [debug] [Thread-1  ]: Writing runtime SQL for node "seed.Data_warehouse_assignment_4.raw_reviews"
+[0m22:27:57.726083 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_reviews: COMMIT
+[0m22:27:57.727173 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_reviews"
+[0m22:27:57.727173 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_reviews: COMMIT
+[0m22:27:57.749054 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m22:27:57.751329 [debug] [Thread-1  ]: Timing info for seed.Data_warehouse_assignment_4.raw_reviews (execute): 22:27:57.545085 => 22:27:57.750192
+[0m22:27:57.751329 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_reviews: Close
+[0m22:27:57.831839 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2c16b972-9925-4edd-9fd4-8e354dc52e99', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197F6A28190>]}
+[0m22:27:57.832839 [info ] [Thread-1  ]: 4 of 5 OK loaded seed file main.raw_reviews .................................... [[32mINSERT 1465[0m in 0.29s]
+[0m22:27:57.834627 [debug] [Thread-1  ]: Finished running node seed.Data_warehouse_assignment_4.raw_reviews
+[0m22:27:57.835678 [debug] [Thread-1  ]: Began running node seed.Data_warehouse_assignment_4.raw_users
+[0m22:27:57.836681 [info ] [Thread-1  ]: 5 of 5 START seed file main.raw_users .......................................... [RUN]
+[0m22:27:57.838803 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly seed.Data_warehouse_assignment_4.raw_reviews, now seed.Data_warehouse_assignment_4.raw_users)
+[0m22:27:57.838803 [debug] [Thread-1  ]: Began compiling node seed.Data_warehouse_assignment_4.raw_users
+[0m22:27:57.839869 [debug] [Thread-1  ]: Timing info for seed.Data_warehouse_assignment_4.raw_users (compile): 22:27:57.839869 => 22:27:57.839869
+[0m22:27:57.840933 [debug] [Thread-1  ]: Began executing node seed.Data_warehouse_assignment_4.raw_users
+[0m22:27:57.863525 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_users"
+[0m22:27:57.864570 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_users: BEGIN
+[0m22:27:57.865735 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:27:57.876273 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m22:27:57.877285 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_users"
+[0m22:27:57.877285 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_users: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "Data_warehouse_assignment_4", "target_name": "dev", "node_id": "seed.Data_warehouse_assignment_4.raw_users"} */
+truncate table "data_warehouse"."main"."raw_users"
+[0m22:27:57.878335 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m22:27:57.880575 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_users"
+[0m22:27:57.880575 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_users: 
+          COPY "data_warehouse"."main"."raw_users" FROM 'C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4\seeds\raw_users.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m22:27:57.888316 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m22:27:57.891024 [debug] [Thread-1  ]: Writing runtime SQL for node "seed.Data_warehouse_assignment_4.raw_users"
+[0m22:27:57.894024 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_users: COMMIT
+[0m22:27:57.894024 [debug] [Thread-1  ]: Using duckdb connection "seed.Data_warehouse_assignment_4.raw_users"
+[0m22:27:57.895024 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_users: COMMIT
+[0m22:27:57.900592 [debug] [Thread-1  ]: SQL status: OK in 0.0 seconds
+[0m22:27:57.901632 [debug] [Thread-1  ]: Timing info for seed.Data_warehouse_assignment_4.raw_users (execute): 22:27:57.840933 => 22:27:57.901632
+[0m22:27:57.902688 [debug] [Thread-1  ]: On seed.Data_warehouse_assignment_4.raw_users: Close
+[0m22:27:57.927552 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2c16b972-9925-4edd-9fd4-8e354dc52e99', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197F57715B0>]}
+[0m22:27:57.927552 [info ] [Thread-1  ]: 5 of 5 OK loaded seed file main.raw_users ...................................... [[32mINSERT 1194[0m in 0.09s]
+[0m22:27:57.928605 [debug] [Thread-1  ]: Finished running node seed.Data_warehouse_assignment_4.raw_users
+[0m22:27:57.930904 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:27:57.930904 [debug] [MainThread]: On master: BEGIN
+[0m22:27:57.931933 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:27:57.940582 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m22:27:57.940582 [debug] [MainThread]: On master: COMMIT
+[0m22:27:57.941651 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:27:57.941651 [debug] [MainThread]: On master: COMMIT
+[0m22:27:57.942652 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m22:27:57.943769 [debug] [MainThread]: On master: Close
+[0m22:27:57.944769 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:27:57.945821 [debug] [MainThread]: Connection 'create_data_warehouse_main' was properly closed.
+[0m22:27:57.945821 [debug] [MainThread]: Connection 'list_data_warehouse_main' was properly closed.
+[0m22:27:57.946858 [debug] [MainThread]: Connection 'seed.Data_warehouse_assignment_4.raw_users' was properly closed.
+[0m22:27:57.946858 [info ] [MainThread]: 
+[0m22:27:57.947953 [info ] [MainThread]: Finished running 5 seeds in 0 hours 0 minutes and 0.97 seconds (0.97s).
+[0m22:27:57.949024 [debug] [MainThread]: Command end result
+[0m22:27:57.961985 [info ] [MainThread]: 
+[0m22:27:57.963032 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:27:57.964074 [info ] [MainThread]: 
+[0m22:27:57.964074 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+[0m22:27:57.966188 [debug] [MainThread]: Command `dbt build` succeeded at 22:27:57.965187 after 1.87 seconds
+[0m22:27:57.966256 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197F289B160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197F5473F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197F55E1730>]}
+[0m22:27:57.967271 [debug] [MainThread]: Flushing usage events

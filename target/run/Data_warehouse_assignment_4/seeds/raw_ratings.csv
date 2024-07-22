@@ -1,0 +1,13 @@
+
+    
+    
+    
+    create table "data_warehouse"."main"."raw_ratings" ("product_id" text,"rating" text,"rating_count" integer)
+  ;
+    -- dbt seed --
+    
+          COPY "data_warehouse"."main"."raw_ratings" FROM 'C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4\seeds\raw_ratings.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  

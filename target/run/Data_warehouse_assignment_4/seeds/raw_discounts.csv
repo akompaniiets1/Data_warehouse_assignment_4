@@ -1,0 +1,11 @@
+
+    
+    
+    truncate table "data_warehouse"."main"."raw_discounts";
+    -- dbt seed --
+    
+          COPY "data_warehouse"."main"."raw_discounts" FROM 'C:\Users\asti\Documents\GitHub\Data_warehouse_assignment_4\seeds\raw_discounts.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  
